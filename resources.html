@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Resources</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,700,600,800' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src = "js/main.js"/>
+	</head>
+
+	<script>
+		/*$(document).ready(function() {
+			$("header").load("partials/header.html");
+		});*/
+	</script>
+
+	<body>
+		<header class = "font-large hcenter-wrapper"></header>
+		<div id = "container">
+			<div id = "container-text" class = "border-box">
+				The Chrome Extension works as follows:
+				<ol>
+					<li>All DOM elements on the current page are selected.</li>
+					<li>As each element is traversed through, both the CSS styling for background-color and font color are obtained.</li>
+					<li>Since the colors are in RGB format, they must be changed to XYZ.</li>
+					<li>Once in XYZ form, the colors are tested to see if either is on one of the color confusion lines (given by the selected option in the dropdown menu). </li>
+					<li>If so, that node element is pushed onto an array for that respective color confusion line. This is because we will need to replace each color in the array with the same one color, since color confusion lines represent all colors that cannot be distinguished between.</li>
+					<li>Otherwise, the node element gets pushed onto an array containing all other colors.</li>
+					<li>After all elements are traversed through, we now go through each color confusion line array.</li>
+					<li>We set a line that does not go through the confusion line, and calculate the intersection between that line and the confusion line. This gives us a point to use to replcae all colors within that confusion line.</li>
+					<li>We inversely calculate the XYZ coordinate to RGB, and replace each node element with the new color.</li>
+					<li>Taking each element in the array of all colors, we now need to see if they would be colors that could not be seen because of color blindness, but do not exist on a color confusion line.</li>
+					<li>If so, we replace the unseen colors as necessary.</li>
+				</ol>
+
+				The resources we used to obtain the matrix to convert between RGB/XYZ, and determine the color confusion line equations are as follows:
+				<ul>
+					<li>http://scien.stanford.edu/pages/labsite/2006/psych221/projects/06/dingting/introduction.htm</li>
+					<li>http://www.cs.rit.edu/~ncs/color/t_convert.html</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
