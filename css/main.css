@@ -23,7 +23,7 @@ a {
 }
 
 .font-orange {
-	color: #E8CE8A;
+	color: #E8882A;
 }
 
 .font-gray, a.font-white:hover {
@@ -100,6 +100,7 @@ header ul {
 
 #left-column {
 	width: 15%;
+	font-size: 13px;
 }
 
 .center-wrapper {
@@ -113,21 +114,35 @@ header ul {
 }
 
 .box {
-	width: 150px;
-	height: 150px;
+	width: 50px;
+	height: 50px;
 	border: 1px solid #000;
 	float: left;
 	display: inline-block;
-	margin: 15px;
+	margin: 15px 15px 25px 0px;
+	text-align: center;
 }
 
 .no-left-margin {
 	margin-left: 0px;
 }
 
+#container-text {
+	padding: 25px;
+	font-size: 15px;
+}
 
+#boxes {
+	position: fixed;
+	overflow: scroll;
+	height: 75%;
+}
 
+.box-label {
+	margin-top: 50px;
+	font-size: 10px;
+}
 
-
-
-
+#left-column-description {
+	text-align: justify;
+}

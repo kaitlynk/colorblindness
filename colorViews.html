@@ -13,25 +13,50 @@
 		<div id = "container">
 			<div id = "left-column" class = "border-box column">
 				<div class = "center-wrapper">
-					<select id = "blindness-type-select">
+					Color Blindness: <select id = "blindness-type-select">
+						<option value = "random">Random</option>
 						<option value = "protonope">Protanope</option>
 						<option value = "deuternope">Deuteranope</option>
 						<option value = "tritonope">Tritanope</option>
+					</select><br/><br/>
+					Number of Boxes: <select id = "blindness-type-number">
+						<option value = "10">10</option>
+						<option value = "20">20</option>
+						<option value = "30">30</option>
+						<option value = "40">40</option>
+						<option value = "50">50</option>
+						<option value = "60">60</option>
+						<option value = "70">70</option>
+						<option value = "80">80</option>
+						<option value = "90">90</option>
+						<option value = "100">100</option>
 					</select>
+				</div>
+				<br/>
+				<div id = "left-column-description">
+					In this application, you can generate a number of color boxes. These can either be randomly selected, or be mostly ones that fall on a color confusion line. When you use the color blindness extension, this will change the colors within the boxes to see what a colorblind person may see. Change things up, and view colors through another person's eyes!
 				</div>
 			</div>
 
 			<div id = "right-column" class = "border-box column">
 				<span class = "vertical-line"></span>
 				<div id = "left-text">
-					<div id = "blindness-type-header"><span id = "blindness-type-header-text"></span><br/><input type = 'button' value = 'Refresh' onclick = 'setBoxesColors()' id = 'refresh-button' /></div><br/>
-					<div id = "box-1" class = "box border-box no-left-margin"></div>
-					<div id = "box-2" class = "box border-box"></div>
-					<div id = "box-3" class = "box border-box"></div>
-					<div id = "box-4" class = "box border-box"></div>
-					<div id = "box-5" class = "box border-box"></div>
+					<div id = "blindness-type-header"><span id = "blindness-type-header-text"></span><br/><input type = 'button' value = 'Refresh' onclick = 'setBoxesColors()' id = 'refresh-button' /></div>
+					<div id = "boxes">
+						<div id = "box-1" class = "box border-box"></div>
+						<div id = "box-2" class = "box border-box"></div>
+						<div id = "box-3" class = "box border-box"></div>
+						<div id = "box-4" class = "box border-box"></div>
+						<div id = "box-5" class = "box border-box"></div>
+						<div id = "box-6" class = "box border-box"></div>
+						<div id = "box-7" class = "box border-box"></div>
+						<div id = "box-8" class = "box border-box"></div>
+						<div id = "box-9" class = "box border-box"></div>
+						<div id = "box-10" class = "box border-box"></div>
+					</div>
 				</div>
 			</div>
 		</div>
+
 	</body>
 </html>

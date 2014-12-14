@@ -6,7 +6,11 @@ $(document).ready(function() {
 });
 
 $(document).on("change", "#blindness-type-select", function() {
-	changeBlindnessType($(this).val());
+	changeBlindnessType($(this).val(), $("#blindness-type-number").val());
+});
+
+$(document).on("change", "#blindness-type-number", function() {
+	changeBlindnessType($("#blindness-type-select").val(), $(this).val());
 });
 
 function uncapitalizeFirstLetter(word) {
@@ -32,7 +36,7 @@ function changeBlindnessType(type) {
 		$("#blindness-type-header-text").text(capitalizeSentence(curr_blindness_type));
 	}
 
-	setBoxesColors(uncapitalizeFirstLetter( curr_blindness_type) );
+	setBoxesColors( uncapitalizeFirstLetter( curr_blindness_type) );
 }
 
 function getRandomPointOnLine(type) {
@@ -73,22 +77,33 @@ function convertXYZtoRGB(x, y, z) {
 	return { 'r':r, 'g':g, 'b':b };
 }
 
-function setBoxesColors( type ) {
-	var boxes = $(".box");
-
+function setBoxesColors( type , num_boxes ) {
 	if (type == undefined) {
-		type = $("#blindness-type-select").val();
+		curr_blindness_type = $("#blindness-type-select").val() ;
+		type = uncapitalizeFirstLetter( curr_blindness_type );
 	}
 
-	for (var i = 0; i < boxes.length; i++) {
-		setBoxColor( boxes[i], type );
+	if (num_boxes == undefined) {
+		num_boxes = $("#blindness-type-number").val();
+	}
+
+	$("#boxes").empty();
+
+	for (var i = 0; i < num_boxes; i++) {
+		$("#boxes").append('<div id = "box-'+num_boxes+'" class = "box border-box"></div>');
+		setBoxColor( $(".box").last(), type );
+		$(".box").last().append("<div class = 'box-label'>"+$(".box").last().css('background-color')+"</div>");
 	}
 
 }
 
 function setBoxColor( box, type ) {
-	var temp_xyz = getRandomPointOnLine( type );
-	var temp_rgb = convertXYZtoRGB( temp_xyz.x, temp_xyz.y, temp_xyz.z );
+	if ( type == 'r' ) {
+		var temp_rgb = {'r': Math.random() * 255, 'g': Math.random() * 255, 'b': Math.random() * 255};
+	} else {
+		var temp_xyz = getRandomPointOnLine( type );
+		var temp_rgb = convertXYZtoRGB( temp_xyz.x, temp_xyz.y, temp_xyz.z );
+	}
 
 	var r = Math.floor(temp_rgb.r);
 	var g = Math.floor(temp_rgb.g);
