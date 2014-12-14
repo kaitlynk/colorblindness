@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+
+	"name": "Color Blindness App",
+	"version": "1.0",
+	"description": "Get every background-color from the current tab.",
+
+	"browser_action": {
+		"default_icon": "sandslash.png"
+	},
+
+	"background": {
+		"scripts": ["jquery.min.js","event.js"],
+		"persistent": true
+	},
+
+	"permissions": ["<all_urls>"]
+}

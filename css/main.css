@@ -1,0 +1,133 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.font-white {
+	color: #FFF
+}
+
+.font-green {
+	color: #AFFFA5;
+}
+
+.font-orange {
+	color: #E8CE8A;
+}
+
+.font-gray, a.font-white:hover {
+	color: #B2B2B2;
+}
+
+.font-large {
+	font-size: 16px;
+	font-weight: 100;
+}
+
+.horizontal-list {
+	list-style: none;
+}
+
+.horizontal-list li {
+	display: inline;
+	margin: 0px 25px;
+}
+
+.hcenter-wrapper {
+	display: table;
+}
+
+.hcenter-item {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.border-box {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+ 	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+header {
+	height: 50px;
+	width: 100%;
+	background-color: #292929;
+}
+
+header ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+#container {
+	width: 100%;
+	position: absolute;
+	top: 50px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.column {
+	display: inline;
+	float: left;
+	position: relative;
+	margin: 0px;
+	padding: 20px;
+	height: 100%;
+}
+
+.vertical-line {
+	width: 0px;
+	position: absolute;
+	border-left: 1px dotted #000;
+	left: 0px;
+	bottom: 20px;
+	top: 20px;
+}
+
+#left-column {
+	width: 15%;
+}
+
+.center-wrapper {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#right-column {
+	width: 85%;
+}
+
+.box {
+	width: 150px;
+	height: 150px;
+	border: 1px solid #000;
+	float: left;
+	display: inline-block;
+	margin: 15px;
+}
+
+.no-left-margin {
+	margin-left: 0px;
+}
+
+
+
+
+
+
+

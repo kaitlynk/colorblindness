@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Color Blindness Application - Color Views</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,700,600,800' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src = "js/main.js"></script>
+	</head>
+	<body>
+		<header class = "font-large hcenter-wrapper"></header>
+
+		<div id = "container">
+			<div id = "left-column" class = "border-box column">
+				<div class = "center-wrapper">
+					<select id = "blindness-type-select">
+						<option value = "protonope">Protanope</option>
+						<option value = "deuternope">Deuteranope</option>
+						<option value = "tritonope">Tritanope</option>
+					</select>
+				</div>
+			</div>
+
+			<div id = "right-column" class = "border-box column">
+				<span class = "vertical-line"></span>
+				<div id = "left-text">
+					<div id = "blindness-type-header"><span id = "blindness-type-header-text"></span><br/><input type = 'button' value = 'Refresh' onclick = 'setBoxesColors()' id = 'refresh-button' /></div><br/>
+					<div id = "box-1" class = "box border-box no-left-margin"></div>
+					<div id = "box-2" class = "box border-box"></div>
+					<div id = "box-3" class = "box border-box"></div>
+					<div id = "box-4" class = "box border-box"></div>
+					<div id = "box-5" class = "box border-box"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
